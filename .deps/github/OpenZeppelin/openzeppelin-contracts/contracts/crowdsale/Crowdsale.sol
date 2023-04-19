@@ -82,8 +82,8 @@ contract Crowdsale is Context, ReentrancyGuard {
     //     buyTokens(_msgSender());
     // }
     // solidity v0.8 fallback
-    fallback() public payable {}
-    receive() public payable {}
+    fallback() external payable {}
+    receive() external payable {}
 
     /**
      * @return the token being sold.
