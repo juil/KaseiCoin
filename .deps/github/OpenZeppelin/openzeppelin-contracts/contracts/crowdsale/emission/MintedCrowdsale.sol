@@ -1,8 +1,7 @@
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.5.0;
 
 import "../Crowdsale.sol";
-// import "../../token/ERC20/ERC20Mintable.sol"; // Not needed for v4
+import "../../token/ERC20/ERC20Mintable.sol";
 
 /**
  * @title MintedCrowdsale
@@ -18,7 +17,6 @@ contract MintedCrowdsale is Crowdsale {
     function _deliverTokens(address beneficiary, uint256 tokenAmount) internal {
         // Potentially dangerous assumption about the type of the token.
         require(
-            // @TODO: Update constructor for v4
             ERC20Mintable(address(token())).mint(beneficiary, tokenAmount),
                 "MintedCrowdsale: minting failed"
         );
