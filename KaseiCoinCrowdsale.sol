@@ -1,12 +1,8 @@
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.5.0;
 
 import "./KaseiCoin.sol";
-// Old implementaiton
-// Crowdsales have been depracated since v3 (https://docs.openzeppelin.com/contracts/4.x/crowdsales)
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/crowdsale/Crowdsale.sol";
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/crowdsale/emission/MintedCrowdsale.sol";
-
 
 
 // Have the KaseiCoinCrowdsale contract inherit the following OpenZeppelin:
