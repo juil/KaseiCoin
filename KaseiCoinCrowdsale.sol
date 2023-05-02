@@ -17,7 +17,7 @@ contract KaseiCoinCrowdsale is Crowdsale { // Inherit Crowdsale contract
     constructor(
         uint rate,
         address payable wallet,
-        IERC20 token
+        KaseiCoin token
     ) public Crowdsale(rate, wallet, token) {
         // constructor can stay empty
     }
