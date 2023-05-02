@@ -8,11 +8,16 @@ import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5
 // Have the KaseiCoinCrowdsale contract inherit the following OpenZeppelin:
 // * Crowdsale
 // * MintedCrowdsale
-contract KaseiCoinCrowdsale { // UPDATE THE CONTRACT SIGNATURE TO ADD INHERITANCE
+contract KaseiCoinCrowdsale is Crowdsale { // Inherit Crowdsale contract
     
     // Provide parameters for all of the features of your crowdsale, such as the `rate`, `wallet` for fundraising, and `token`.
+    // rate must be uint greater than 0
+    // wallet must be address != 0
+    // token must be IERC20 token
     constructor(
-        // YOUR CODE HERE!
+        uint rate,
+        address payable wallet,
+        IERC20 token
     ) public Crowdsale(rate, wallet, token) {
         // constructor can stay empty
     }
