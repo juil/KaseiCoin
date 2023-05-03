@@ -4,3 +4,5 @@
 # Ignore movie files
 *.mov
 
+# Ignore build artifacts
+artifacts/
